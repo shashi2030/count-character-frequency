@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html manifest="developer.appcache">
+<head>
+<meta http-equiv='cache-control' content='private'>
+    <meta http-equiv='expires' content='100'>
+	<meta http-equiv='pragma' content='public'>
+<title>HTML Tutorial</title>
+</head>
+<body>
+
+<script>
+function getFrequency(string) {
+  if(string == ''){
+return;
+}
+
+    var freq = '';
+  var tempcount = 1;
+    for (var i=0; i<string.length;i++) {
+        var character = string.charAt(i);
+      
+      if(string[i] == string[i+1]){
+         tempcount += 1;
+      }else{
+        freq += string[i] + tempcount;
+        tempcount = 1;
+      }
+    }
+
+    return freq;
+};
+
+console.log(getFrequency('aabbtytytggccttt'));
+</script>
+
+</script>
+</body>
+</html>
